@@ -113,7 +113,7 @@ define(['require', 'handlebars', 'mods/mod_ui', 'mods/mod_globals', "text!templa
 
    function mod_load_handler() {
       globals.output = "Epilog"
-      ui.ui_prompt("process?")
+      ui.ui_prompt("¿Proceso?")
       var controls = findEl("mod_output_controls")
       controls.innerHTML = mod_epilog_controls_tpl()
 
@@ -133,7 +133,7 @@ define(['require', 'handlebars', 'mods/mod_ui', 'mods/mod_globals', "text!templa
       controls.innerHTML += "<br><input type='radio' name='origin' id='mod_bottom_left'> left bot right <input type='radio' name='origin' id='mod_bottom_right'>"
        */
       var label = findEl("mod_processes_label")
-      label.innerHTML = "process"
+      label.innerHTML = "Proceso"
       label.style.display = "block"
       label.onclick = function(e) {
          ui.ui_clear()

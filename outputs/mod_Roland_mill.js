@@ -114,7 +114,7 @@ define(['require',
    //
    function mod_load_handler() {
       globals.output = "Roland_mill"
-      ui.ui_prompt("process?")
+      ui.ui_prompt("¿Proceso?")
       var controls = findEl("mod_output_controls")
       var ctx = {
          show_move: true
@@ -227,7 +227,7 @@ define(['require',
          fileUtils.send(name, file, command, server);
          });
       var label = findEl("mod_processes_label")
-      label.innerHTML = "process"
+      label.innerHTML = "Proceso"
       label.style.display = "block"
       label.onclick = function(e) {
          ui.ui_clear()

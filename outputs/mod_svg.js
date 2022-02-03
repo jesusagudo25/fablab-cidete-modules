@@ -68,11 +68,11 @@ define(['require',
 
    function mod_load_handler() {
       globals.output = "svg"
-      ui.ui_prompt("process?")
+      ui.ui_prompt("¿Proceso?")
       var controls = document.getElementById("mod_output_controls")
       controls.innerHTML = ""
       var label = document.getElementById("mod_processes_label")
-      label.innerHTML = "process"
+      label.innerHTML = "Proceso"
       label.style.display = "block"
       label.onclick = function(e) {
          ui.ui_clear()

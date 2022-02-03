@@ -82,7 +82,7 @@ define(['require', 'mods/mod_ui', 'mods/mod_globals', 'outputs/mod_outputs', 'mo
             //
             // call outputs
             //
-         ui.ui_prompt("output format?")
+         ui.ui_prompt("¿Formato de salida?")
          outputs.init()
       }
       //

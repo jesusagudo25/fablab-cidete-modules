@@ -39,7 +39,7 @@ define(['mods/mod_ui'], function(ui) {
 
       function mod_inputs() {
          var label = document.getElementById("mod_inputs_label")
-         label.innerHTML = "input format"
+         label.innerHTML = "Formato de entrada"
          label.onclick = function(e) {
             ui.ui_clear()
             var label = document.getElementById("mod_outputs_label")
@@ -52,7 +52,7 @@ define(['mods/mod_ui'], function(ui) {
             div.innerHTML = ""
             var div = document.getElementById("mod_process_controls")
             div.innerHTML = ""
-            ui.ui_prompt("input file to read?")
+            ui.ui_prompt("¿Archivo de entrada para leer?")
             ui.ui_menu_file(input_array, "mod_inputs")
             ui.ui_view_reset()
          }

@@ -131,11 +131,11 @@ define(['require',
 
    function mod_load_handler() {
       globals.output = "Trotec"
-      ui.ui_prompt("process?")
+      ui.ui_prompt("¿Proceso??")
       var controls = findEl("mod_output_controls")
       controls.innerHTML = mod_trotec_controls_tpl()
       var label = findEl("mod_processes_label")
-      label.innerHTML = "process"
+      label.innerHTML = "Proceso"
       label.style.display = "block"
       label.onclick = function(e) {
          ui.ui_clear()

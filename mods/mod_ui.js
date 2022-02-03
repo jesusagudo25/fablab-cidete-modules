@@ -36,14 +36,16 @@ define([
       // set up UI elements
       //
       var span = findEl("mod_prompt")
-      span.innerHTML = "<a href='mods.html'>fab modules</a>"
+      span.innerHTML = "<a href='mods.html'>FabLab CIDETE Modules</a>"
       span.setAttribute("style","display:block;position:absolute;top:"+Defaults.margin+";left:"+(1.5*Defaults.margin+span.offsetHeight))
       globals.mod_menu_width = 2.2*span.offsetWidth
       globals.mod_menu_height = span.offsetHeight
       //
       var span = findEl("mod_logo")
       span.setAttribute("style","display:block;position:absolute;top:"+Defaults.margin+";left:"+Defaults.margin+";width:"+globals.mod_menu_height+";height:"+globals.mod_menu_height)
-      span.appendChild(ui_CBA(globals.mod_menu_width))
+      span.innerHTML = `<svg xmlns="" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>`;
       //
       var div = findEl("mod_inputs")
       div.setAttribute("style","position:absolute;top:"+(1.5*Defaults.margin+globals.mod_menu_height)+";left:"+Defaults.margin)
@@ -159,80 +161,6 @@ define([
          name: modname,
          module: mod
          }
-      }
-   //
-   // mod_ui_CBA
-   //    add CBA logo
-   //
-   var ui_CBA = function(size) {
-      var x = 0
-      var y = 2.8*size/3.8
-      var svgNS = "http://www.w3.org/2000/svg"
-      var logo = document.createElementNS(svgNS, "svg")
-      logo.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink")
-      logo.setAttributeNS(null,'viewBox',"0 0 "+size+" "+size)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x)
-      new_rect.setAttribute("y", y)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x + 1.4 * size / 3.8)
-      new_rect.setAttribute("y", y)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x + 2.8 * size / 3.8)
-      new_rect.setAttribute("y", y)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x)
-      new_rect.setAttribute("y", y - 1.4 * size / 3.8)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x + 2.8 * size / 3.8)
-      new_rect.setAttribute("y", y - 1.4 * size / 3.8)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x + 1.4 * size / 3.8)
-      new_rect.setAttribute("y", y - 2.8 * size / 3.8)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_rect = document.createElementNS(svgNS, "rect");
-      new_rect.setAttribute("width", size / 3.8)
-      new_rect.setAttribute("height", size / 3.8)
-      new_rect.setAttribute("x", x + 2.8 * size / 3.8)
-      new_rect.setAttribute("y", y - 2.8 * size / 3.8)
-      new_rect.setAttribute("fill", "blue")
-      logo.appendChild(new_rect)
-      var new_circ = document.createElementNS(svgNS, "circle");
-      new_circ.setAttribute("r", size / (2 * 3.8))
-      new_circ.setAttribute("cx", x + size / (2 * 3.8))
-      new_circ.setAttribute("cy", y + size / (2 * 3.8) - 2.8 * size / 3.8)
-      new_circ.setAttribute("fill", "red")
-      logo.appendChild(new_circ)
-      var new_circ = document.createElementNS(svgNS, "circle");
-      new_circ.setAttribute("r", size / (2 * 3.8))
-      new_circ.setAttribute("cx", x + size / (2 * 3.8) + 1.4 * size / 3.8)
-      new_circ.setAttribute("cy", y + size / (2 * 3.8) - 1.4 * size / 3.8)
-      new_circ.setAttribute("fill", "red")
-      logo.appendChild(new_circ)
-      return logo
       }
    //
    // mod_ui_clear
@@ -478,7 +406,7 @@ define([
       if (m != "")
          findEl("mod_prompt").innerHTML = m
       else
-         findEl("mod_prompt").innerHTML = "<a href='mods.html'>fab modules</a>"
+         findEl("mod_prompt").innerHTML = "<a href='mods.html'>FabLab CIDETE Modules</a>"
       }
    //
    // mod_ui_show_input

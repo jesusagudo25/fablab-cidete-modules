@@ -217,7 +217,7 @@ define(['require',
       //
       // call outputs
       //
-      ui.ui_prompt("output format?")
+      ui.ui_prompt("¿Formato de salida?")
       outputs.init()
       }
    //

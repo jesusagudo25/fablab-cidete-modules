@@ -48,7 +48,7 @@ define(['require', 'mods/mod_ui'], function(require) {
 
       function mod_outputs() {
          var label = document.getElementById("mod_outputs_label")
-         label.innerHTML = "output format"
+         label.innerHTML = "¿Formato de salida?"
          label.style.display = "block"
          label.onclick = function(e) {
             ui.ui_clear()

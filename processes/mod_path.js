@@ -66,7 +66,7 @@ define(['require',
          save_btn = findEl("mod_save");
          save_btn.addEventListener("click", function() {
             if (globals.path == undefined) {
-               ui.ui_prompt("path not calculated");
+               ui.ui_prompt("ERROR!! path not calculated");
             } else {
                var file = routineFun(globals.path);
                var name = globals.input_basename + globals.type;
@@ -76,7 +76,7 @@ define(['require',
          send_btn = findEl("mod_send");
          send_btn.addEventListener("click", function() {
             if (globals.path == undefined) {
-               ui.ui_prompt("path not calculated");
+               ui.ui_prompt("ERROR!! path not calculated");
             } else {
                var file = routineFun(globals.path);
                var name = globals.input_basename + globals.type;

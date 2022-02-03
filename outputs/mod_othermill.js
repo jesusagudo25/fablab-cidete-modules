@@ -152,11 +152,11 @@ define(['require', 'handlebars', 'mods/mod_ui', 'mods/mod_globals', 'text!templa
 
    function mod_load_handler() {
       globals.output = "othermill"
-      ui.ui_prompt("process?")
+      ui.ui_prompt("¿Proceso?")
       var controls = findEl("mod_output_controls")
       controls.innerHTML = mod_othermill_controls_tpl();
       var label = findEl("mod_processes_label")
-      label.innerHTML = "process"
+      label.innerHTML = "Proceso"
       label.style.display = "block"
       label.onclick = function(e) {
          ui.ui_clear()
